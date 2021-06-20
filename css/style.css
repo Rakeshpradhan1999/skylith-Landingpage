@@ -1,0 +1,339 @@
+body{
+  font-family: 'Work Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: montserrat;
+
+}
+a{
+  color: inherit;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+button:focus {
+    outline: 0px dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+ header{
+  position: relative;
+}
+
+header .navbar-dark{
+background-color: transparent;
+color: #000000;
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index: 99;
+
+}
+.burger {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    float: right;
+    margin: 3px 0;
+    border-radius: 30px;
+    position: absolute;
+    transition: all .3s ease;
+    opacity: 1;
+}
+
+.burger span:nth-of-type(2) {
+    top: 7px;
+}
+
+.burger span:nth-of-type(3) {
+    top: 14px;
+}
+
+.burger:hover span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 6px;
+    background-color: white;
+}
+
+.burger:hover span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.burger:hover span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 6px;
+    background-color: white;
+}
+.navbar-dark .navbar-toggler {
+  border:none;
+}
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/* media */
+@media(max-width:575px){
+  .carousel-caption .small-tle{
+    font-size:10px;
+
+  }
+
+}
+@media(min-width:576px){
+  .carousel-caption .small-tle{
+    font-size:10px;
+
+  }
+
+}
+@media(min-width:768px){
+  .carousel-caption .small-tle{
+    font-size:15px;
+
+  }
+}
+@media(min-width:992px){
+  .carousel-caption .small-tle{
+    font-size:15px;
+
+  }
+}
+@media(min-width:1200px){
+    .carousel-caption .small-tle{
+      font-size:15px;
+
+    }
+}
+.menu .nav-item{
+  padding:10px;
+
+}
+.carousel-indicators li{
+  height:2px;
+  width:15px;
+}
+.carousel-caption{
+bottom:25%;
+}
+.small-tle{
+  color: #ffff;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 10px;
+
+}
+.text-js{
+  opacity: 0;
+  font-size: 18px;
+}
+.type-js h1{
+  font-style: italic;
+}
+.btn-style{
+  color: #ffff;
+  font-size: 14px;
+  background: #ea2f5c;
+  padding:16px 35px;
+  margin-top: 30px;
+  border-radius: 35px;
+  text-transform: uppercase;
+  transform: translatey(0px);
+}
+.btn-style:hover{
+  transform: translatey(-2px);
+  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.sec-gap{
+  padding-top:100px;
+  padding-bottom:100px;
+}
+.sec-title h2{
+  font-size: 31px;
+  font-weight: 700;
+  margin-bottom:60px;
+  color: #171717;
+}
+
+.style-tab{
+  border:1px #7c7c7c33 solid;
+  margin-bottom: 40px;
+}
+.style-tab li a{
+  font-family: inherit;
+  padding:29px 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:#454545;
+
+}
+.style-tab li{
+  transition: all 0.5s;
+}
+.nav-tabs .nav-link.active{
+  border-color: #ea2f5c;
+  color: #ea2f5c;
+}
+.style-tab li:hover a{
+    color:#ea2f5c;
+}
+
+.nav-tabs .nav-link{
+ border-bottom:1px solid transparent;
+ border-left: none;
+ border-right: none;
+ border-top: none;
+border-radius: 0;
+}
+.tab-content span{
+  font-size: 70px;
+  color: #ea2f5c;
+
+}
+.tab-content p{
+  color: #484848;
+  margin-top: 13px;
+  font-size: 15px;
+}
+.portfolio-sec{
+  position: relative;
+}
+
+.overlay-hov{
+  position: absolute;
+  width:80%;
+  height:80%;
+  top:10%;
+  left:10%;
+  background-color: #5233e9;
+  padding:40px;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.overlay-hov h2{
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.portfolio-sec:hover .overlay-hov{
+  opacity: 1;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+}
+.footer-back{
+    background-image: url(../img/foot-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+.footer-back:before{
+  position: absolute;
+  top:0;
+  left: 0;
+  content: "";
+  width:100%;
+  height:100%;
+  background-color: #ea2e5ae6;
+  z-index: -100;
+}
+.style-btn-border{
+  padding:19px 30px;
+  margin-top:30px;
+  border:2px #fff solid ;
+  color: #fff;
+  background: transparent;
+  text-transform: uppercase;
+  border-radius: 35px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+.style-btn-border:hover{
+ background-color: #ffff;
+ color:#454545;
+ border:2px #fff solid;
+}
+.footer-bg{
+  background:black;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+.icons li a{
+  padding:0 15px;
+  display: block;
+  font-size: 14px;
+
+
+}
